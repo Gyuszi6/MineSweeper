@@ -26,6 +26,8 @@ const Game = () => {
     }
   }, [ctx.playerName, navigate]);
 
+  console.log("a git kedvéért! :)");
+
   return (
     <Container>
       <HeadContainer>
