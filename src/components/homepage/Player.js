@@ -20,7 +20,7 @@ const AddPlayer = () => {
 
   const navigate = useNavigate();
   const [playerName, setPlayerName] = useState("");
-  const [gameMode, setGameMode] = useState("válasszál");
+  const [gameMode, setGameMode] = useState("choose");
 
   const gameModeHandler = (event) => {
     setGameMode(event.target.value);
@@ -60,11 +60,11 @@ const AddPlayer = () => {
           />
         </InputContainer>
         <InputContainer>
-          <Label htmlFor="valami">Choose a nehézség:</Label>
+          <Label htmlFor="dif">Choose difficulty:</Label>
 
-          <Select name="valami" id="valami" onChange={gameModeHandler}>
-            <option hidden value="válasszál">
-              Válasszál
+          <Select name="dif" id="dif" onChange={gameModeHandler}>
+            <option hidden value="choose">
+              choose
             </option>
             <option value="10,10,10">easy</option>
             <option value="15,15,20">medium</option>
@@ -75,7 +75,7 @@ const AddPlayer = () => {
         {gameMode === "custom" && <Custom />}
         <Button
           type="submit"
-          disabled={playerName.length === 0 || gameMode === "válasszál"}
+          disabled={playerName.length === 0 || gameMode === "choose"}
         >
           Start Game
         </Button>
