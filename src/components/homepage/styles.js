@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #302d2d;
+  background-color: grey;
 `;
 
 export const TitleContainer = styled.div`
@@ -52,15 +52,11 @@ export const Button = styled.button`
   border-width: 3px;
   border-radius: 5px;
   cursor: pointer;
-  &:hover {
-    background-color: pink;
+  &:hover:enabled {
+    background-color: yellow;
   }
   &:disabled {
     cursor: not-allowed;
-  }
-
-  &:disabled:hover {
-    background-color: yellow;
   }
 `;
 
